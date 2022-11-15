@@ -7,11 +7,27 @@
 
 import SwiftUI
 
+class AppState: ObservableObject {
+    @Published var hasOnboarded: Bool
+    
+    init(hasOnboarded: Bool) {
+        self.hasOnboarded = hasOnboarded
+    }
+}
+
 @main
 struct CalCountApp: App {
+    @ObservedObject var appState = AppState(hasOnboarded: false)
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if appState.hasOnboarded {
+                ContentView()
+                    .environmentObject(appState)
+            } else {
+                Onboarding()
+                    .environmentObject(appState)
+            }
+            
         }
     }
 }

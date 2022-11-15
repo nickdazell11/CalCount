@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010083C9291A68E600013B01 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010083C8291A68E600013B01 /* Color.swift */; };
 		01328C4F2918DC6B00FC41AA /* CalCountApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C4E2918DC6B00FC41AA /* CalCountApp.swift */; };
 		01328C512918DC6B00FC41AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C502918DC6B00FC41AA /* ContentView.swift */; };
 		01328C532918DC6E00FC41AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01328C522918DC6E00FC41AA /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 		01328C612918DC6E00FC41AA /* CalCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C602918DC6E00FC41AA /* CalCountTests.swift */; };
 		01328C6B2918DC6E00FC41AA /* CalCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C6A2918DC6E00FC41AA /* CalCountUITests.swift */; };
 		01328C6D2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C6C2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift */; };
+		019895A2291DF83300F31D55 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019895A1291DF83300F31D55 /* Onboarding.swift */; };
+		01DE4844291EE03000BD99FE /* DailyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE4843291EE03000BD99FE /* DailyLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010083C8291A68E600013B01 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		01328C4B2918DC6B00FC41AA /* CalCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01328C4E2918DC6B00FC41AA /* CalCountApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCountApp.swift; sourceTree = "<group>"; };
 		01328C502918DC6B00FC41AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		01328C662918DC6E00FC41AA /* CalCountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalCountUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01328C6A2918DC6E00FC41AA /* CalCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCountUITests.swift; sourceTree = "<group>"; };
 		01328C6C2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCountUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		019895A1291DF83300F31D55 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		01DE4843291EE03000BD99FE /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +103,9 @@
 			children = (
 				01328C4E2918DC6B00FC41AA /* CalCountApp.swift */,
 				01328C502918DC6B00FC41AA /* ContentView.swift */,
+				019895A0291DF7F500F31D55 /* CustomViews */,
 				01328C522918DC6E00FC41AA /* Assets.xcassets */,
+				010083C8291A68E600013B01 /* Color.swift */,
 				01328C542918DC6E00FC41AA /* CalCount.entitlements */,
 				01328C552918DC6E00FC41AA /* Preview Content */,
 			);
@@ -127,6 +135,15 @@
 				01328C6C2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift */,
 			);
 			path = CalCountUITests;
+			sourceTree = "<group>";
+		};
+		019895A0291DF7F500F31D55 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				019895A1291DF83300F31D55 /* Onboarding.swift */,
+				01DE4843291EE03000BD99FE /* DailyLog.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +278,9 @@
 			files = (
 				01328C512918DC6B00FC41AA /* ContentView.swift in Sources */,
 				01328C4F2918DC6B00FC41AA /* CalCountApp.swift in Sources */,
+				01DE4844291EE03000BD99FE /* DailyLog.swift in Sources */,
+				019895A2291DF83300F31D55 /* Onboarding.swift in Sources */,
+				010083C9291A68E600013B01 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,12 +429,14 @@
 		01328C712918DC6E00FC41AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CalCount/CalCount.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalCount/Preview Content\"";
+				DEVELOPMENT_TEAM = YFBF27RC4G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -435,7 +457,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Nick-Dazell.CalCount";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,12 +468,14 @@
 		01328C722918DC6E00FC41AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CalCount/CalCount.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalCount/Preview Content\"";
+				DEVELOPMENT_TEAM = YFBF27RC4G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -471,7 +496,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Nick-Dazell.CalCount";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

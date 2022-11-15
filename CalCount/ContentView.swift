@@ -8,19 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var appState: AppState
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            Color.theme.primary.ignoresSafeArea()
+            Image("paintLogo")
+                .resizable()
+                .foregroundColor(Color.theme.primary)
+                .frame(width: 300, height: 270)
+                .clipped()
+            Text("CalCount")
+                .kerning(8)
+                .fontDesign(Font.Design.rounded)
+                .dynamicTypeSize(DynamicTypeSize.xxxLarge)
+                .fontWidth(Font.Width.expanded)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(Color.theme.accent)
+                .position(x: 205, y: 575)
+            Button("Enter/Adjust Macros") {
+                appState.hasOnboarded = false
+            }
+            .position(x: 205, y: 650)
+            Button("Daily Log") {
+                DailyLog()
+            }
+            .position(x: 205, y: 700)
+            .font(.headline)
+            .kerning(1.5)
+
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
     }
 }
