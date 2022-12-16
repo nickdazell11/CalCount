@@ -20,6 +20,14 @@ struct Onboarding: View {
     @State var savedCarb: Int? = nil
     @State var savedCal: Int? = nil
     
+    /*
+    func saveMacros() {
+        if savedProtein != nil {
+            protein = savedProtein
+        }
+    }
+    */
+    
     var body: some View {
         ZStack{
             Color.theme.primary.ignoresSafeArea()
