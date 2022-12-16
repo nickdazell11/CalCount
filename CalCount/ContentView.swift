@@ -18,12 +18,8 @@ struct ContentView: View {
                 .frame(width: 300, height: 270)
                 .clipped()
             Text("CalCount")
-                .kerning(8)
-                .fontDesign(Font.Design.rounded)
                 .dynamicTypeSize(DynamicTypeSize.xxxLarge)
-                .fontWidth(Font.Width.expanded)
                 .font(.largeTitle)
-                .fontWeight(.bold)
                 .foregroundColor(Color.theme.accent)
                 .position(x: 205, y: 575)
             Button("Enter/Adjust Macros") {
@@ -35,7 +31,6 @@ struct ContentView: View {
             }
             .position(x: 205, y: 700)
             .font(.headline)
-            .kerning(1.5)
 
         }
     }
