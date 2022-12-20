@@ -76,10 +76,15 @@ struct Onboarding: View {
                         .padding()
                         .foregroundColor(Color.theme.accent)
                 }
-                Button("Save and Close") {
+                Button("Go Back") {
+                    appState.hasOnboarded = true
+                }
+                .padding()
+                Button("Save and Return") {
                     saveMacros()
                     appState.hasOnboarded = true
                 }
+                .padding()
                 Section(header: Text("Saved Macros:")) {
                     Text(String(savedProtein))
                     Text(String(savedFat))
