@@ -16,7 +16,6 @@
 		01328C6B2918DC6E00FC41AA /* CalCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C6A2918DC6E00FC41AA /* CalCountUITests.swift */; };
 		01328C6D2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01328C6C2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift */; };
 		018F36C8294C4C8E00F7F411 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F36C7294C4C8E00F7F411 /* Onboarding.swift */; };
-		018F36CA29529E8C00F7F411 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F36C929529E8C00F7F411 /* Helper.swift */; };
 		018F36CC2952A0BC00F7F411 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F36CB2952A0BC00F7F411 /* MotherView.swift */; };
 		018F36CE2952A8B500F7F411 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018F36CD2952A8B500F7F411 /* ViewRouter.swift */; };
 		01DE4844291EE03000BD99FE /* DailyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE4843291EE03000BD99FE /* DailyLog.swift */; };
@@ -53,7 +52,6 @@
 		01328C6A2918DC6E00FC41AA /* CalCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCountUITests.swift; sourceTree = "<group>"; };
 		01328C6C2918DC6E00FC41AA /* CalCountUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCountUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		018F36C7294C4C8E00F7F411 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
-		018F36C929529E8C00F7F411 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		018F36CB2952A0BC00F7F411 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		018F36CD2952A8B500F7F411 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		01DE4843291EE03000BD99FE /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				01328C4E2918DC6B00FC41AA /* CalCountApp.swift */,
-				018F36C929529E8C00F7F411 /* Helper.swift */,
 				018F36CD2952A8B500F7F411 /* ViewRouter.swift */,
 				018F36CB2952A0BC00F7F411 /* MotherView.swift */,
 				01328C502918DC6B00FC41AA /* HomePage.swift */,
@@ -289,7 +286,6 @@
 				018F36CC2952A0BC00F7F411 /* MotherView.swift in Sources */,
 				01328C4F2918DC6B00FC41AA /* CalCountApp.swift in Sources */,
 				018F36C8294C4C8E00F7F411 /* Onboarding.swift in Sources */,
-				018F36CA29529E8C00F7F411 /* Helper.swift in Sources */,
 				01DE4844291EE03000BD99FE /* DailyLog.swift in Sources */,
 				010083C9291A68E600013B01 /* Color.swift in Sources */,
 				018F36CE2952A8B500F7F411 /* ViewRouter.swift in Sources */,
