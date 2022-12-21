@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 struct Onboarding: View {
-    @EnvironmentObject var appState: AppState
+    //@EnvironmentObject var appState: AppState
+    @StateObject var viewRouter: ViewRouter
+    
     @State var protein: Int = 0
     @State var fat: Int = 0
     @State var carb: Int = 0
@@ -77,12 +79,14 @@ struct Onboarding: View {
                         .foregroundColor(Color.theme.accent)
                 }
                 Button("Go Back") {
-                    appState.hasOnboarded = true
+                    viewRouter.currentPage = .homePage
+                    //appState.hasOnboarded = true
                 }
                 .padding()
                 Button("Save and Return") {
                     saveMacros()
-                    appState.hasOnboarded = true
+                    viewRouter.currentPage = .homePage
+                    //appState.hasOnboarded = true
                 }
                 .padding()
                 Section(header: Text("Saved Macros:")) {
@@ -98,7 +102,7 @@ struct Onboarding: View {
 
 struct Onboarding_Previews: PreviewProvider {
     static var previews: some View {
-        Onboarding()
+        Onboarding(viewRouter: ViewRouter())
             
     }
 }

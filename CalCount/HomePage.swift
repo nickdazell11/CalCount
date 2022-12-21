@@ -7,8 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @EnvironmentObject var appState: AppState
+struct HomePage: View {
+    
+    //@EnvironmentObject var appState: AppState
+    @StateObject var viewRouter: ViewRouter
+    
     var body: some View {
         ZStack{
             Color.theme.primary.ignoresSafeArea()
@@ -23,11 +26,12 @@ struct ContentView: View {
                 .foregroundColor(Color.theme.accent)
                 .position(x: 205, y: 575)
             Button("Enter/Adjust Macros") {
-                appState.hasOnboarded = false
+                viewRouter.currentPage = .onboarding
+                //appState.hasOnboarded = false
             }
             .position(x: 205, y: 650)
             Button("Daily Log") {
-                DailyLog()
+                viewRouter.currentPage = .dailyLog
             }
             .position(x: 205, y: 700)
             .font(.headline)
@@ -38,7 +42,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomePage(viewRouter: ViewRouter())
             
     }
 }

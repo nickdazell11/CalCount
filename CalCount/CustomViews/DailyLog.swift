@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DailyLog: View {
+    @StateObject var viewRouter: ViewRouter
     var body: some View {
         ZStack {
             Color.theme.primary.ignoresSafeArea()
@@ -15,6 +16,9 @@ struct DailyLog: View {
                 .foregroundColor(Color.theme.accent)
                 .frame(width: 300, height: 500)
                 .position(x:205, y: 100)
+            Button("Return Home") {
+                viewRouter.currentPage = .homePage
+            }
             
         }
             
@@ -23,6 +27,6 @@ struct DailyLog: View {
 
 struct DailyLog_Previews: PreviewProvider {
     static var previews: some View {
-        DailyLog()
+        DailyLog(viewRouter: ViewRouter())
     }
 }
