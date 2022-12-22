@@ -29,14 +29,22 @@ struct Onboarding: View {
     }()
     
     func saveMacros() {
-        UserDefaults.standard.set(protein, forKey: "ProKey")
-        UserDefaults.standard.set(fat, forKey: "FatKey")
-        UserDefaults.standard.set(carb, forKey: "CarbKey")
-        UserDefaults.standard.set(cal, forKey: "CalKey")
-        savedProtein = protein
-        savedFat = fat
-        savedCarb = carb
-        savedCal = cal
+        if (protein != 0) {
+            UserDefaults.standard.set(protein, forKey: "ProKey")
+            savedProtein = protein
+        }
+        if (fat != 0) {
+            UserDefaults.standard.set(fat, forKey: "FatKey")
+            savedFat = fat
+        }
+        if (carb != 0) {
+            UserDefaults.standard.set(carb, forKey: "CarbKey")
+            savedCarb = carb
+        }
+        if (cal != 0) {
+            UserDefaults.standard.set(cal, forKey: "CalKey")
+            savedCal = cal
+        }
     }
     
     var body: some View {
