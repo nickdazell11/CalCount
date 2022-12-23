@@ -12,6 +12,7 @@ enum Page {
     case homePage
     case onboarding
     case dailyLog
+    case history
 }
 
 class ViewRouter: ObservableObject {

@@ -21,6 +21,8 @@ struct MotherView: View {
             Onboarding(viewRouter: viewRouter)
         case .dailyLog:
             DailyLog(viewRouter: viewRouter)
+        case .history:
+            DailyLog(viewRouter: viewRouter)
         }
     }
 }

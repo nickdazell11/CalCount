@@ -19,6 +19,11 @@ struct DailyLog: View {
             Button("Return Home") {
                 viewRouter.currentPage = .homePage
             }
+            .position(x:205, y: 600)
+            Button("View History") {
+                viewRouter.currentPage = .history
+            }
+            .position(x:205, y: 700)
             
         }
             
