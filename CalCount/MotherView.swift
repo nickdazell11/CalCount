@@ -22,7 +22,7 @@ struct MotherView: View {
         case .dailyLog:
             DailyLog(viewRouter: viewRouter)
         case .history:
-            DailyLog(viewRouter: viewRouter)
+            History(viewRouter: viewRouter)
         }
     }
 }
