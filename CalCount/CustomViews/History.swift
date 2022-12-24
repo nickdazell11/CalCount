@@ -31,6 +31,38 @@ struct History: View {
                             Text("Cals")
                                 .padding()
                         }
+                        HStack {
+                            VStack {
+                                ForEach(foodArr, id: \.self) {data in
+                                    Text(data)
+                                        .padding()
+                                }
+                            }
+                            VStack {
+                                ForEach(proArr, id: \.self) {data in
+                                    Text(data)
+                                        .padding()
+                                }
+                            }
+                            VStack {
+                                ForEach(fatArr, id: \.self) {data in
+                                    Text(data)
+                                        .padding()
+                                }
+                            }
+                            VStack {
+                                ForEach(carbArr, id: \.self) {data in
+                                    Text(data)
+                                        .padding()
+                                }
+                            }
+                            VStack {
+                                ForEach(calArr, id: \.self) {data in
+                                    Text(data)
+                                        .padding()
+                                }
+                            }
+                        }
                     }
                 }
                 Button("Return To Log") {

@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+var foodArr: [String] = []
+var proArr: [String] = []
+var fatArr: [String] = []
+var carbArr: [String] = []
+var calArr: [String] = []
+
 struct DailyLog: View {
     @StateObject var viewRouter: ViewRouter
     @State var foodName: String = ""
@@ -14,11 +20,6 @@ struct DailyLog: View {
     @State var fatAmt: String = ""
     @State var carbAmt: String = ""
     @State var calAmt: String = ""
-    @State var foodArr: [String] = []
-    @State var proArr: [String] = []
-    @State var fatArr: [String] = []
-    @State var carbArr: [String] = []
-    @State var calArr: [String] = []
     var body: some View {
         ZStack {
             Color.theme.primary.ignoresSafeArea()
@@ -62,38 +63,6 @@ struct DailyLog: View {
                     enterFood()
                 }
                 .padding()
-                HStack {
-                    VStack {
-                        ForEach(foodArr, id: \.self) {data in
-                            Text(data)
-                                .padding()
-                        }
-                    }
-                    VStack {
-                        ForEach(proArr, id: \.self) {data in
-                            Text(data)
-                                .padding()
-                        }
-                    }
-                    VStack {
-                        ForEach(fatArr, id: \.self) {data in
-                            Text(data)
-                                .padding()
-                        }
-                    }
-                    VStack {
-                        ForEach(carbArr, id: \.self) {data in
-                            Text(data)
-                                .padding()
-                        }
-                    }
-                    VStack {
-                        ForEach(calArr, id: \.self) {data in
-                            Text(data)
-                                .padding()
-                        }
-                    }
-                }
                 Button("Return Home") {
                     viewRouter.currentPage = .homePage
                 }
