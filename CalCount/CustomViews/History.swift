@@ -15,13 +15,30 @@ struct History: View {
     var body: some View {
         ZStack {
             Color.theme.primary.ignoresSafeArea()
-            Text("Today's Foods:")
-                .foregroundColor(Color.theme.accent)
-                .frame(width: 300, height: 500)
-                .position(x:205, y: 100)
-            Button("Return To Log") {
-                viewRouter.currentPage = .dailyLog
+            VStack {
+                ScrollView {
+                    VStack {
+                        Text("Today's Foods:")
+                        HStack {
+                            Text("Food")
+                                .padding()
+                            Text("Protein")
+                                .padding()
+                            Text("Fat")
+                                .padding()
+                            Text("Carbs")
+                                .padding()
+                            Text("Cals")
+                                .padding()
+                        }
+                    }
+                }
+                Button("Return To Log") {
+                    viewRouter.currentPage = .dailyLog
+                }
+                
             }
+            
             
         }
             
