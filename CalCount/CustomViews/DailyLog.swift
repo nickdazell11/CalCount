@@ -13,6 +13,11 @@ var fatArr: [String] = []
 var carbArr: [String] = []
 var calArr: [String] = []
 
+var proLeft: Int = savedProtein
+var fatLeft: Int = savedFat
+var carbLeft: Int = savedCarb
+var calLeft: Int = savedCal
+
 struct DailyLog: View {
     @StateObject var viewRouter: ViewRouter
     @State var foodName: String = ""
@@ -82,6 +87,10 @@ struct DailyLog: View {
         fatArr.append(fatAmt)
         carbArr.append(carbAmt)
         calArr.append(calAmt)
+        proLeft = proLeft - Int(proAmt)!
+        fatLeft = fatLeft - Int(fatAmt)!
+        carbLeft = carbLeft - Int(carbAmt)!
+        calLeft = calLeft - Int(calAmt)!
         foodName = ""
         proAmt = ""
         fatAmt = ""

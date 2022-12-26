@@ -8,6 +8,11 @@
 import Foundation
 import SwiftUI
 
+var savedProtein: Int = UserDefaults.standard.integer(forKey: "ProKey")
+var savedFat: Int = UserDefaults.standard.integer(forKey: "FatKey")
+var savedCarb: Int = UserDefaults.standard.integer(forKey: "CarbKey")
+var savedCal: Int = UserDefaults.standard.integer(forKey: "CalKey")
+
 struct Onboarding: View {
     //@EnvironmentObject var appState: AppState
     @StateObject var viewRouter: ViewRouter
@@ -16,11 +21,6 @@ struct Onboarding: View {
     @State var fat: Int = 0
     @State var carb: Int = 0
     @State var cal: Int = 0
-    
-    @State var savedProtein: Int = UserDefaults.standard.integer(forKey: "ProKey")
-    @State var savedFat: Int = UserDefaults.standard.integer(forKey: "FatKey")
-    @State var savedCarb: Int = UserDefaults.standard.integer(forKey: "CarbKey")
-    @State var savedCal: Int = UserDefaults.standard.integer(forKey: "CalKey")
     
     let quantityFormatter: NumberFormatter = {
         let formatter = NumberFormatter()

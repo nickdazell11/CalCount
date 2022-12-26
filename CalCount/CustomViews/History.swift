@@ -19,6 +19,7 @@ struct History: View {
                 ScrollView {
                     VStack {
                         Text("Today's Foods:")
+                            .padding()
                         HStack {
                             Text("Food")
                                 .padding()
@@ -65,9 +66,33 @@ struct History: View {
                         }
                     }
                 }
+                Text("Today's Macros Remaining...")
+                HStack {
+                    VStack {
+                        Text("Pro:")
+                            .padding()
+                        Text(String(proLeft))
+                    }
+                    VStack {
+                        Text("Fat:")
+                            .padding()
+                        Text(String(fatLeft))
+                    }
+                    VStack {
+                        Text("Carb:")
+                            .padding()
+                        Text(String(carbLeft))
+                    }
+                    VStack {
+                        Text("Cal:")
+                            .padding()
+                        Text(String(calLeft))
+                    }
+                }
                 Button("Return To Log") {
                     viewRouter.currentPage = .dailyLog
                 }
+                .padding()
                 
             }
             
